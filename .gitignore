@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
+data/fish_data/
 data/*.csv
 models/*.sav
 mlruns
