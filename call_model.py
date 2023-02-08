@@ -31,11 +31,11 @@ def find_maxima(predictions):
     return translate_class_index(a), translate_class_index(b), translate_class_index(c)
 
 
-def classify(model_folder, image_input):
+def classify(model_folder, image_input, image_dim):
     model_dir = model_folder
     model = keras.models.load_model(model_dir)
-    img_dim_1 =  224
-    img_dim_2 =  224
+    img_dim_1 =  image_dim
+    img_dim_2 =  image_dim
     # Load the model
     #model = keras.models.load_model('model.h5')
     
@@ -66,14 +66,16 @@ def classify(model_folder, image_input):
     # Print the predicted class
     return f"Predicted species: {translate_class_index(class_index)}, \nthe next most likely predictions are {a}, {b} or {c}"
     
-def main():
+def main(model_folder, image_input, image_dim):
     # Just disables the warning, doesn't take advantage of AVX/FMA to run faster
     import os
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
     
-    model_folder = "models/" + input("Which model would you like to use? (saved model folder inside /models):")
-    image_input= 'data/fish_examples/' + input('Please specify an image file (img file inside data/fish_examples folder):')
-    text= classify(model_folder, image_input)   
+    #model_folder = "models/" + input("Which model would you like to use? (saved model folder inside /models):")
+    #image_input= 'data/fish_examples/' + input('Please specify an image file (img file inside data/fish_examples folder):')
+    #image_dim = input('Please specify the image dimensions (square image):')
+    #image_dim = int(image_dim)
+    text = classify(model_folder, image_input, image_dim)   
     print(text)    
         
 if __name__ == '__main__':
