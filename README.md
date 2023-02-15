@@ -1,6 +1,6 @@
 # <span style="color:green">__Capstone Project__
 
-## <span style="color:navy">__>> fish fish facts! <<__
+# <span style="color:navy">__>> fish fish facts! <<__
 
 🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟
 
