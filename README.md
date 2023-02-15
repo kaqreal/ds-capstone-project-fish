@@ -66,4 +66,4 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-![Team Logo](fishfishfacts_logo.png)
+![Team Logo](fishfishfacts_logo_black.png)
